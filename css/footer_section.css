@@ -35,3 +35,30 @@
 	margin-left: 50px;
 	border-right: none;
 }
+@media only screen and (max-width: 768px) {
+	.footer {
+		flex-direction: column;
+	}
+	.footer__middle {
+		justify-content: space-between;
+		order: 2;
+	}
+	.footer__left,
+	.footer__middle,
+	.footer__right {
+		border: none;
+		margin-bottom: 50px;
+	}
+	.footer__right {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.footer__middle {
+		flex-direction: column;
+	}
+	.footer__middle-left,
+	.footer__middle-middle {
+		margin-bottom: 50px;
+	}
+}
