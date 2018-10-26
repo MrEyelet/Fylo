@@ -32,9 +32,15 @@ h5 {
 h6 {
 	font-size: 0.8rem;
 }
+.outer-container {
+	overflow: hidden;
+}
 .hero,
 .main,
 .subscribe,
 .footer {
 	padding: 100px 50px;
+}
+.subscribe {
+	padding-bottom: 250px;
 }
