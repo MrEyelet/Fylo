@@ -1,0 +1,22 @@
+.main__title {
+	margin-bottom: 100px;
+    text-align: center;
+}
+.main__illustration {
+	margin-right: 100px;
+}
+.main__content-col:first-of-type {
+	margin-right: 50px;
+}
+.subscribe {
+	max-width: 600px;
+	width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.subscribe__email {
+	width: 300px;
+	padding: 10px 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
