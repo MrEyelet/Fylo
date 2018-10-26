@@ -1,0 +1,16 @@
+.btn {
+	background: #06d79d;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+.btn__jumbo {
+	padding: 20px 100px;
+}
+.btn__large {
+
+}
+.btn__small {
+	
+}
