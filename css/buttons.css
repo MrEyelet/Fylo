@@ -2,15 +2,25 @@
 	background: #06d79d;
     border: none;
     color: #fff;
-    font-size: 1rem;
     border-radius: 8px;
 }
 .btn__jumbo {
-	padding: 20px 100px;
+	padding: 20px 95px;
+	font-weight: 700;
+	font-size: 1rem;
 }
 .btn__large {
-
+	padding: 10px 70px;
+	font-size: 0.8rem;
 }
 .btn__small {
-	
+	padding: 10px 30px;
+	font-size: 0.8rem;
+}
+.btn--hover:hover {
+	cursor: pointer;
+}
+.btn__signin {
+	background: transparent;
+	margin-right: 25px;
 }
