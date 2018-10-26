@@ -1,3 +1,25 @@
+.main {
+	position: relative;
+}
+.main::before,
+.main::after {
+	content: '';
+    position: absolute;
+    left: -10%;
+    top: -65px;
+    height: 140px;
+    width: 120%;
+    -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+    background: #fff;
+}
+.main::after {
+	top: auto;
+    bottom: -660px;
+    background: #07043b;
+    z-index: -1;
+}
 .main__title {
 	margin-bottom: 100px;
     text-align: center;
