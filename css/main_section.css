@@ -16,7 +16,7 @@
 }
 .main::after {
 	top: auto;
-    bottom: -660px;
+    bottom: -600px;
     background: #07043b;
     z-index: -1;
 }
