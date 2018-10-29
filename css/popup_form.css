@@ -1,16 +1,18 @@
 .popup-form {
+	display: none;
 	position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     max-width: 800px;
     width: 100%;
-    min-height: 500px;
+    height: 500px;
 	background: #fff;
 	border-radius: 5px;
 	z-index: 99;
 	-webkit-box-shadow: 0px 0px 90px -17px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 90px -17px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 90px -17px rgba(0,0,0,0.75);
 }
 .popup-form__elements {
@@ -51,4 +53,13 @@
 }
 .popup-form__illustration {
 	width: 100%;
+}
+/************************************************************************/
+/********************* JAVA SCRIPT CLASSES START ************************/
+/************************************************************************/
+.js-popup-form--show {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }

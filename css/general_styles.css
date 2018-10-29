@@ -44,6 +44,7 @@ h6 {
 .subscribe {
 	padding-bottom: 250px;
 }
+
 @media only screen and (max-width: 550px) {
 	h1 {
 	font-size: 1.8rem;
@@ -69,4 +70,11 @@ h6 {
 	.footer {
 		padding: 100px 20px;
 	}
+}
+/************************************************************************/
+/********************* JAVA SCRIPT CLASSES START ************************/
+/************************************************************************/
+.js-body--blur {
+	-webkit-filter: blur(5px);
+	        filter: blur(5px);
 }
