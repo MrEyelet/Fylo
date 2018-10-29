@@ -14,7 +14,7 @@
 .footer__link::before {
 	content:'';
 	position: absolute;
-	bottom: -2px;
+	bottom: -4px;
 	width: 0;
 	height: 1px;
 	background: #06d79d;
