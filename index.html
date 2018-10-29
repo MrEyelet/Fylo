@@ -11,9 +11,29 @@
 	<link rel="stylesheet" type="text/css" href="css/main_section.css">
 	<link rel="stylesheet" type="text/css" href="css/footer_section.css">
 	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/popup_form.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i|Raleway:400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
+	<div class="popup-form fx-container">
+		<div class="popup-form__col fx-container fx-center">
+			<img class="popup-form__illustration" src="img/illustration-popup.svg" alt="" title="">
+		</div>
+		<div class="popup-form__col fx-container fx-center">
+			<button class="btn btn__close btn--hover"><img src="img/icon-close.svg" alt="" title=""></button>
+			<div class="popup-form__elements">
+				<button class="btn btn__signin btn--hover">Sign In</button><button class="btn btn__signin btn__signin--active btn--hover">Sign Up</button>
+				<form class="form">
+					<input class="form__input form__text" type="text" name="text" placeholder="your full name">
+					<input class="form__input form__email" type="email" name="email" placeholder="email@example.com">
+					<input class="form__input form__passowrd" type="password" name="password" placeholder="password">
+					<input class="form__input" type="checkbox" name="policy" value="accept"> I agree all statements in <a href="">terms of service</a>
+					<input type="submit" value="Sign Up" class="btn btn__small btn--hover">
+					<button class="btn btn__signin btn--hover">I have an account</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div class="outer-container">
 		<header class="hero fx-container fx-space-between fx-center-v">
 			<nav class="navigation fx-container fx-space-between fx-center-v">
@@ -52,11 +72,11 @@
 			<h2 class="subscribe__title">Get Early Access Today</h2>
 			<p class="subscribe__info">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions
 					, our support team would be happy to help you.</p>
-			<form class="subscribtion">
-				<input class="subscribe__email" type="email" name="email" placeholder="email@example.com">
+			<form class="form">
+				<input class="form__input form__email" type="email" name="email" placeholder="email@example.com">
 				<input type="submit" value="Join" class="btn btn__large btn--hover">
 			</form>
-		</section>	
+		</section>
 		<footer class="footer fx-container">
 			<div class="footer__left">
 				<img class="footer__logo" src="img/logo.svg" alt="" title="">
@@ -94,9 +114,9 @@
 				</div>
 			</div>
 			<div class="footer__right">
-				<form class="subscription">
-					<p class="subscription__info">Recieve updates form us, including tips and tricks on how to improve your workflow.</p>
-					<input class="subscribe__email" type="email" name="email" placeholder="email@example.com">
+				<form class="form">
+					<p class="form__info">Recieve updates form us, including tips and tricks on how to improve your workflow.</p>
+					<input class="form__input form__email" type="email" name="email" placeholder="email@example.com">
 					<input type="submit" value="Join" class="btn btn__large btn--hover">
 				</form>
 			</div>
