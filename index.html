@@ -10,8 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/hero_section.css">
 	<link rel="stylesheet" type="text/css" href="css/main_section.css">
 	<link rel="stylesheet" type="text/css" href="css/footer_section.css">
-	<link rel="stylesheet" type="text/css" href="css/buttons.css">
 	<link rel="stylesheet" type="text/css" href="css/popup_form.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i|Raleway:400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
@@ -22,14 +22,14 @@
 		<div class="popup-form__col fx-container fx-center">
 			<button class="btn btn__close btn--hover"><img src="img/icon-close.svg" alt="" title=""></button>
 			<div class="popup-form__elements">
-				<button class="btn btn__signin btn--hover">Sign In</button><button class="btn btn__signin btn__signin--active btn--hover">Sign Up</button>
+				<button class="btn btn__link btn--hover btn__switch-signin">Sign In</button><button class="btn btn__link btn__link--active btn--hover btn__switch-signup">Sign Up</button>
 				<form class="form">
-					<input class="form__input form__text" type="text" name="text" placeholder="your full name">
-					<input class="form__input form__email" type="email" name="email" placeholder="email@example.com">
-					<input class="form__input form__passowrd" type="password" name="password" placeholder="password">
-					<input class="form__input" type="checkbox" name="policy" value="accept"> I agree all statements in <a href="">terms of service</a>
+					<input class="form__input form__text" type="text" name="text" placeholder="your name" required>
+					<input class="form__input form__email" type="email" name="email" placeholder="email@example.com" required>
+					<input class="form__input form__passowrd" type="password" name="password" placeholder="password" required>
+					<span class="form__checkbox"><input class="form__input" type="checkbox" name="policy" value="accept" required> I agree all statements in <a href="">terms of service</a></span>
 					<input type="submit" value="Sign Up" class="btn btn__small btn--hover">
-					<button class="btn btn__signin btn--hover">I have an account</button>
+					<button class="btn btn__link btn--hover btn__switch-signin">I have an account</button>
 				</form>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 			<nav class="navigation fx-container fx-space-between fx-center-v">
 				<img class="hero__logo" src="img/logo.svg" alt="" title="">
 				<div class="navigation__btns">
-					<button class="btn btn__signin btn--hover">Sign In</button><button class="js-popup-trigger btn btn__small btn--hover">Sign Up</button>
+					<button class="js-popup-trigger btn btn__link btn--hover btn__switch-signin">Sign In</button><button class="js-popup-trigger btn btn__small btn--hover ">Sign Up</button>
 				</div>
 			</nav>
 			<div class="hero__cta">
