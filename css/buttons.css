@@ -31,18 +31,18 @@
 	box-shadow: none;
 	color: #06d79d;
 }
-.btn__signin,
+.btn__link,
 .btn__close {
 	background: transparent;
 	border: none;
 	margin-right: 25px;
-	color: #fff;
+	color: #9e9e9e;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
 	padding: 0;
 	overflow: visible;
 }
-.btn__signin::before {
+.btn__link::before {
 	content:'';
 	position: absolute;
 	left: 0;
@@ -54,10 +54,13 @@
 	-o-transition: .3s;
 	transition: .3s;
 }
-.btn__signin:hover::before {
+.btn__link:hover::before {
 	width: 100%;
 }
-.btn__signin--active::before {
+.btn__link--active {
+	color: #06d79d;
+}
+.btn__link--active::before {
 	width: 100%;
 }
 .btn__close {
