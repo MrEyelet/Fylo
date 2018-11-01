@@ -2,69 +2,116 @@ var sign = document.querySelectorAll('.js-popup-trigger');
 var popupForm = document.querySelector('.popup-form');
 var outerContainer = document.querySelector('.outer-container');
 var btnClose = document.querySelector('.btn__close');
-var btnSwitchSignin = document.querySelectorAll('.btn__switch-signin');
-var btnSwitchSignup = document.querySelectorAll('.btn__switch-signup');
+var btnSignin = document.querySelectorAll('.btn__switch-signin');
+var btnSignup = document.querySelectorAll('.btn__switch-signup');
 var formEmail = document.querySelector('.form__email');
 var formCheckbox = document.querySelector('.form__checkbox');
 var btnValue = document.querySelector('.form .btn');
+var btnInnerTxt= document.querySelector('.btn__inner-txt');
+var scrollableElement = document.querySelector('.scrollableElement');
+var topBar = document.querySelector('.navigation');
+
 
 for (var i = 0; i < sign.length; i++) {
     sign[i].addEventListener('click', showPopupForm);
 }
 
-for (var i = 0; i < btnSwitchSignin.length; i++) {
-	btnSwitchSignin[i].addEventListener('click', switchToSignin);
+for (var i = 0; i < btnSignin.length; i++) {
+	btnSignin[i].addEventListener('click', switchToSignin);
 }
 
-for (var i = 0; i < btnSwitchSignup.length; i++) {
-	btnSwitchSignup[i].addEventListener('click', switchToSignup)
+for (var i = 0; i < btnSignup.length; i++) {
+	btnSignup[i].addEventListener('click', switchToSignup)
 }
 
 btnClose.addEventListener('click', hidePopupForm);
 
+scrollableElement.addEventListener('wheel', findScrollDirection);
+
 function showPopupForm() {
-	popupForm.classList.add('js-popup-form--show');
+	popupForm.classList.remove('js-el--hide');
 	outerContainer.classList.add('js-body--blur');
 };
 
 function hidePopupForm() {
-	popupForm.classList.remove('js-popup-form--show');
+	popupForm.classList.add('js-el--hide');
 	outerContainer.classList.remove('js-body--blur');
-	formEmail.classList.remove('js-input--hide');
-	formCheckbox.classList.remove('js-input--hide');
+	formEmail.classList.remove('js-el--hide');
+	formCheckbox.classList.remove('js-el--hide');
 	btnValue.value = 'Sign Up';
+	btnInnerTxt.innerText = 'I have an account';
 
-	for (var i = 0; i < btnSwitchSignup.length; i++) {
-		btnSwitchSignup[i].classList.add('btn__link--active');
+	for (var i = 0; i < btnSignup.length; i++) {
+		btnSignup[i].classList.add('btn__link--active');
 	}
-	for (var i = 0; i < btnSwitchSignin.length; i++) {
-		btnSwitchSignin[i].classList.remove('btn__link--active');
+	for (var i = 0; i < btnSignin.length; i++) {
+		btnSignin[i].classList.remove('btn__link--active');
 	}
 	
 };
 
 function switchToSignin() {
-	for (var i = 0; i < btnSwitchSignin.length; i++) {
-		btnSwitchSignin[i].classList.add('btn__link--active');
+	for (var i = 0; i < btnSignin.length; i++) {
+		btnSignin[i].classList.add('btn__link--active');
 	}
-	for (var i = 0; i < btnSwitchSignup.length; i++) {
-		btnSwitchSignup[i].classList.remove('btn__link--active');
+	for (var i = 0; i < btnSignup.length; i++) {
+		btnSignup[i].classList.remove('btn__link--active');
 	}
 
-	formEmail.classList.add('js-input--hide');
-	formCheckbox.classList.add('js-input--hide');
+	formEmail.classList.add('js-el--hide');
+	formCheckbox.classList.add('js-el--hide');
 	btnValue.value = 'Sign In';
+	btnInnerTxt.textContent = '';
 };
 
 function switchToSignup() {
-	for (var i = 0; i < btnSwitchSignup.length; i++) {
-		btnSwitchSignup[i].classList.add('btn__link--active');
+	for (var i = 0; i < btnSignup.length; i++) {
+		btnSignup[i].classList.add('btn__link--active');
 	}
-	for (var i = 0; i < btnSwitchSignin.length; i++) {
-		btnSwitchSignin[i].classList.remove('btn__link--active');
+	for (var i = 0; i < btnSignin.length; i++) {
+		btnSignin[i].classList.remove('btn__link--active');
 	}
 
-	formEmail.classList.remove('js-input--hide');
-	formCheckbox.classList.remove('js-input--hide');
+	formEmail.classList.remove('js-el--hide');
+	formCheckbox.classList.remove('js-el--hide');
 	btnValue.value = 'Sign Up';
+	btnInnerTxt.textContent = 'I have an account';
 };
+
+
+function findScrollDirection(event){
+
+    var delta;
+
+    if (event.wheelDelta){
+
+        delta = event.wheelDelta;
+
+    } else{
+
+        delta = -1 *event.deltaY;
+    }
+
+    if (delta <= 0){
+
+        topBar.classList.remove('js--sticky');
+
+    } else if (delta > 0){
+
+        topBar.classList.add('js--sticky');
+
+    }
+}
+
+
+// window.addEventListener("scroll",function(){
+  
+//   if(window.pageYOffset = 0){
+//    topBar.classList.remove('js--sticky');
+//   }
+//   else if(window.pageYOffset < 200){
+//     console.log('else');
+//     // topBar.classList.remove('js--sticky');
+//     // findScrollDirection() {return};
+//   }
+// },false);
