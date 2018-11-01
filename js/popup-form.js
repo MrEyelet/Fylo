@@ -26,7 +26,7 @@ for (var i = 0; i < btnSignup.length; i++) {
 
 btnClose.addEventListener('click', hidePopupForm);
 
-scrollableElement.addEventListener('wheel', findScrollDirection);
+// scrollableElement.addEventListener('wheel', findScrollDirection);
 
 function showPopupForm() {
 	popupForm.classList.remove('js-el--hide');
@@ -34,20 +34,19 @@ function showPopupForm() {
 };
 
 function hidePopupForm() {
-	popupForm.classList.add('js-el--hide');
-	outerContainer.classList.remove('js-body--blur');
-	formEmail.classList.remove('js-el--hide');
-	formCheckbox.classList.remove('js-el--hide');
-	btnValue.value = 'Sign Up';
-	btnInnerTxt.innerText = 'I have an account';
-
 	for (var i = 0; i < btnSignup.length; i++) {
 		btnSignup[i].classList.add('btn__link--active');
 	}
 	for (var i = 0; i < btnSignin.length; i++) {
 		btnSignin[i].classList.remove('btn__link--active');
 	}
-	
+
+	popupForm.classList.add('js-el--hide');
+	outerContainer.classList.remove('js-body--blur');
+	formEmail.classList.remove('js-el--hide');
+	formCheckbox.classList.remove('js-el--hide');
+	btnValue.value = 'Sign Up';
+	btnInnerTxt.innerText = 'I have an account';	
 };
 
 function switchToSignin() {
@@ -79,39 +78,42 @@ function switchToSignup() {
 };
 
 
-function findScrollDirection(event){
+// function findScrollDirection(event){
 
-    var delta;
+//     var delta;
 
-    if (event.wheelDelta){
+//     if (event.wheelDelta){
 
-        delta = event.wheelDelta;
+//         delta = event.wheelDelta;
 
-    } else{
+//     } else{
 
-        delta = -1 *event.deltaY;
+//         delta = -1 *event.deltaY;
+//     }
+
+//     if (delta <= 0){
+
+//         topBar.classList.remove('js--sticky');
+
+//     } else if (delta > 0){
+
+//         topBar.classList.add('js--sticky');
+
+//     }
+// }
+
+    var lastScrollPosition = 0;
+    window.onscroll = function() {
+        var newScrollPosition = window.scrollY;
+ 
+        if (newScrollPosition < lastScrollPosition){
+
+
+            topBar.classList.add('js--sticky');
+        }else{
+
+             
+             topBar.classList.remove('js--sticky');
+        }
+        lastScrollPosition = newScrollPosition;
     }
-
-    if (delta <= 0){
-
-        topBar.classList.remove('js--sticky');
-
-    } else if (delta > 0){
-
-        topBar.classList.add('js--sticky');
-
-    }
-}
-
-
-// window.addEventListener("scroll",function(){
-  
-//   if(window.pageYOffset = 0){
-//    topBar.classList.remove('js--sticky');
-//   }
-//   else if(window.pageYOffset < 200){
-//     console.log('else');
-//     // topBar.classList.remove('js--sticky');
-//     // findScrollDirection() {return};
-//   }
-// },false);
