@@ -8,8 +8,9 @@ var formEmail = document.querySelector('.form__email');
 var formCheckbox = document.querySelector('.form__checkbox');
 var btnValue = document.querySelector('.form .btn');
 var btnInnerTxt= document.querySelector('.btn__inner-txt');
+
 var scrollableElement = document.querySelector('.scrollableElement');
-var topBar = document.querySelector('.navigation');
+
 
 
 for (var i = 0; i < sign.length; i++) {
@@ -102,36 +103,6 @@ function switchToSignup() {
 //     }
 // }
 
-var lastScrollPosition = 0;
 
-window.addEventListener('scroll', function(){
-
-	console.log(lastScrollPosition);
-
-	var newScrollPosition = window.scrollY;
-	 
-	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 300 || (newScrollPosition > lastScrollPosition)) {
-
-	    topBar.classList.remove('js--sticky');
-
-		console.log('up200');
-
-	} 
-	else  {
-		topBar.classList.add('js--sticky');
-		console.log('up');
-	}
-
-	lastScrollPosition = newScrollPosition;
-
-	var test = document.querySelector('.main');
-	var detect = test.offsetTop;
-
-	if (window.pageYOffset >= detect) {
-
-		document.querySelector('.main__illustration').classList.add('js--show');
-	}
-
-});
 
 
