@@ -102,18 +102,36 @@ function switchToSignup() {
 //     }
 // }
 
-    var lastScrollPosition = 0;
-    window.onscroll = function() {
-        var newScrollPosition = window.scrollY;
- 
-        if (newScrollPosition < lastScrollPosition){
+var lastScrollPosition = 0;
+
+window.addEventListener('scroll', function(){
+
+	console.log(lastScrollPosition);
+
+	var newScrollPosition = window.scrollY;
+	 
+	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 300 || (newScrollPosition > lastScrollPosition)) {
+
+	    topBar.classList.remove('js--sticky');
+
+		console.log('up200');
+
+	} 
+	else  {
+		topBar.classList.add('js--sticky');
+		console.log('up');
+	}
+
+	lastScrollPosition = newScrollPosition;
+
+	var test = document.querySelector('.main');
+	var detect = test.offsetTop;
+
+	if (window.pageYOffset >= detect) {
+
+		document.querySelector('.main__illustration').classList.add('js--show');
+	}
+
+});
 
 
-            topBar.classList.add('js--sticky');
-        }else{
-
-             
-             topBar.classList.remove('js--sticky');
-        }
-        lastScrollPosition = newScrollPosition;
-    }
