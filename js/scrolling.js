@@ -2,18 +2,18 @@ var lastScrollPosition = 0;
 var topBar = document.querySelector('.navigation');
 var illustration = document.querySelector('.main__illustration');
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', scrolling);
 
-	console.log(lastScrollPosition);
+function scrolling() {
 
-	var newScrollPosition = window.scrollY;
+	var newScrollPosition = window.pageYOffset;
 	 
-	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 10 || (newScrollPosition > lastScrollPosition)) {
+	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 350 || (newScrollPosition > lastScrollPosition)) {
 
 	    topBar.classList.remove('js--sticky');
 
 	} else  {
-		
+
 		topBar.classList.add('js--sticky');
 
 	}
@@ -23,9 +23,9 @@ window.addEventListener('scroll', function(){
 	var mainSection = document.querySelector('.main');
 	var detect = mainSection.offsetTop;
 
-	if (window.pageYOffset >= detect) {
+	if (newScrollPosition >= detect) {
 
 		illustration.classList.add('js--show');
 	}
 
-});
+};

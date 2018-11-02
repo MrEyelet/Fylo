@@ -10,6 +10,7 @@ var btnValue = document.querySelector('.form .btn');
 var btnInnerTxt= document.querySelector('.btn__inner-txt');
 
 var scrollableElement = document.querySelector('.scrollableElement');
+// var topBar = document.querySelector('.navigation');
 
 
 
