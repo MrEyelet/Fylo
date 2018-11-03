@@ -8,7 +8,7 @@ function scrolling() {
 
 	var newScrollPosition = window.pageYOffset;
 	 
-	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 350 || (newScrollPosition > lastScrollPosition)) {
+	if ((newScrollPosition < lastScrollPosition) && newScrollPosition < 100 || (newScrollPosition > lastScrollPosition)) {
 
 	    topBar.classList.remove('js--sticky');
 
