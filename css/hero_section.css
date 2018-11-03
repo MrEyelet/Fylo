@@ -76,3 +76,8 @@
 		margin-right: 5px;
 	}
 }
+@media only screen and (max-height: 320px) {
+	.hero {
+		min-height: 200vh;
+	}
+}

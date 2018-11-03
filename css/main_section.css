@@ -31,9 +31,9 @@
 	margin-right: 100px;
 	opacity: 0;
 	left: -50px;
-	-webkit-transition: 1s ease-in-out;
-	-o-transition: 1s ease-in-out;
-	transition: 1s ease-in-out;
+	-webkit-transition: .7s ease-in-out;
+	-o-transition: .7s ease-in-out;
+	transition: .7s ease-in-out;
 }
 .main__content {
 	-webkit-box-flex: 1;
