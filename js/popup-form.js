@@ -9,8 +9,6 @@ var formCheckbox = document.querySelector('.form__checkbox');
 var btnValue = document.querySelector('.form .btn');
 var btnInnerTxt= document.querySelector('.btn__inner-txt');
 
-var scrollableElement = document.querySelector('.scrollableElement');
-// var topBar = document.querySelector('.navigation');
 
 
 
@@ -27,8 +25,6 @@ for (var i = 0; i < btnSignup.length; i++) {
 }
 
 btnClose.addEventListener('click', hidePopupForm);
-
-// scrollableElement.addEventListener('wheel', findScrollDirection);
 
 function showPopupForm() {
 	popupForm.classList.remove('js-el--hide');
@@ -78,32 +74,6 @@ function switchToSignup() {
 	btnValue.value = 'Sign Up';
 	btnInnerTxt.textContent = 'I have an account';
 };
-
-
-// function findScrollDirection(event){
-
-//     var delta;
-
-//     if (event.wheelDelta){
-
-//         delta = event.wheelDelta;
-
-//     } else{
-
-//         delta = -1 *event.deltaY;
-//     }
-
-//     if (delta <= 0){
-
-//         topBar.classList.remove('js--sticky');
-
-//     } else if (delta > 0){
-
-//         topBar.classList.add('js--sticky');
-
-//     }
-// }
-
 
 
 
